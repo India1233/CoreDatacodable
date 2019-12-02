@@ -15,6 +15,8 @@
 		3C17931423952BB100208299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C17931223952BB100208299 /* LaunchScreen.storyboard */; };
 		3C17931F23952BB100208299 /* CoreDatacodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17931E23952BB100208299 /* CoreDatacodableTests.swift */; };
 		3C17932A23952BB100208299 /* CoreDatacodableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17932923952BB100208299 /* CoreDatacodableUITests.swift */; };
+		3C179343239539FF00208299 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C179341239539FF00208299 /* User+CoreDataClass.swift */; };
+		3C179344239539FF00208299 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C179342239539FF00208299 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3C17932523952BB100208299 /* CoreDatacodableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDatacodableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C17932923952BB100208299 /* CoreDatacodableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatacodableUITests.swift; sourceTree = "<group>"; };
 		3C17932B23952BB100208299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C179341239539FF00208299 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3C179342239539FF00208299 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		3C1792FA23952BAF00208299 = {
 			isa = PBXGroup;
 			children = (
+				3C179341239539FF00208299 /* User+CoreDataClass.swift */,
+				3C179342239539FF00208299 /* User+CoreDataProperties.swift */,
 				3C17930523952BAF00208299 /* CoreDatacodable */,
 				3C17931D23952BB100208299 /* CoreDatacodableTests */,
 				3C17932823952BB100208299 /* CoreDatacodableUITests */,
@@ -261,6 +267,8 @@
 			files = (
 				3C17930F23952BAF00208299 /* CoreDatacodable.xcdatamodeld in Sources */,
 				3C17930923952BAF00208299 /* ViewController.swift in Sources */,
+				3C179343239539FF00208299 /* User+CoreDataClass.swift in Sources */,
+				3C179344239539FF00208299 /* User+CoreDataProperties.swift in Sources */,
 				3C17930723952BAF00208299 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +445,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8ZB6PL47P;
 				INFOPLIST_FILE = CoreDatacodable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8ZB6PL47P;
 				INFOPLIST_FILE = CoreDatacodable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
