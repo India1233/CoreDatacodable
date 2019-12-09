@@ -5,6 +5,7 @@
 //  Created by Suresh Shiga on 02/12/19.
 //  Copyright © 2019 Test. All rights reserved.
 // https://medium.com/swlh/core-data-using-codable-68660dfb5ce8
+//https://medium.com/@stevenpcurtis.sc/nspredicate-with-core-data-328d9a6dd66c
 
 import UIKit
 import CoreData
@@ -79,20 +80,45 @@ class ViewController: UIViewController {
             } catch {
                 print("An error occurred while saving: \(error)")}}}
     
-    // Load Save Data
+}
+
+//MARK:- Multiplr ways to fetching data
+
+extension ViewController {
     
-    private func loadSaveData(){
+    // Fetch all the records
+    
+//    private func loadSaveData(){
+//        let request:NSFetchRequest<User> = User.fetchRequest()
+//        let sort = NSSortDescriptor(key: "date", ascending: false)
+//        request.sortDescriptors = [sort]
+//
+//        do {
+//            data = try container.viewContext.fetch(request)
+//            tableView.reloadData()
+//        } catch  {
+//            print("Fetch failed")
+//        }
+//    }
+    
+    // Fetch single record
+    
+    private func loadSaveData() {
         let request:NSFetchRequest<User> = User.fetchRequest()
+        request.predicate = NSPredicate(format: "sha BEGINSWITH 'e'")
         let sort = NSSortDescriptor(key: "date", ascending: false)
-        request.sortDescriptors = [sort]
+                request.sortDescriptors = [sort]
         
-        do {
-            data = try container.viewContext.fetch(request)
-            tableView.reloadData()
-        } catch  {
-            print("Fetch failed")
-        }
+                do {
+                    data = try container.viewContext.fetch(request)
+                    tableView.reloadData()
+                } catch  {
+                    print("Fetch failed")
+                }
+        
     }
+    
+    // Fetch multi table Conditions
 }
 
 
